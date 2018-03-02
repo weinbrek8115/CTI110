@@ -1,0 +1,49 @@
+#P3HW2: Software Sales
+
+#Karla Weinbrenner
+
+#2 March 2018
+
+package = int(input("Enter number of packages purchased: "))
+
+#calculate 0.10 of $99 for 10-19 packages
+discount10= (package * 99) * 0.10
+total10=(package * 99) - discount10
+#calculate 0.20 of $99 for 20-49 packages
+discount20= (package * 99) * 0.20
+total20=(package * 99) - discount20
+#calculate 0.30 of $99 for 50-99 packages
+discount30= (package * 99) * 0.30
+total30=(package * 99) - discount30
+#calculate 0.40 of $99 for over 100 packages
+discount40= (package * 99) * 0.40
+total40=(package * 99) - discount40
+
+
+
+def main ():
+
+    if package <=9:
+        print ("Sorry no discount")
+
+    elif package >=10 and package <=19:
+        print ("You receive a 10% discount")
+        print ("The total discount is $", format (discount10, ",.2f"))
+        print ("The total amount is $", format (total10, ",.2f"))
+
+    elif package >=20 and package <=49:
+        print ("You receive a 20% discount")
+        print ("The total discount is $", format (discount20, ",.2f"))
+        print ("The total amount is $", format (total20, ",.2f"))
+
+    elif package >=50 and package <=99:
+        print ("You receive a 30% discount")
+        print ("The total discount is $", format (discount30, ",.2f"))
+        print ("The total amount is $", format (total30, ",.2f"))
+
+    elif package >=100:
+        print ("You receive a 40% discount")
+        print ("The total discount is $", format (discount40, ",.2f"))
+        print ("The total amount is $", format (total40, ",.2f"))
+
+main () 
